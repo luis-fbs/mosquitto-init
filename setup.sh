@@ -18,4 +18,6 @@ if [[ -f $PASSWD_FILE ]]; then
     fi
 else
     : > $PASSWD_FILE
+    sudo chown root:root $PASSWD_FILE
+    sudo chmod 700 $PASSWD_FILE
 fi
